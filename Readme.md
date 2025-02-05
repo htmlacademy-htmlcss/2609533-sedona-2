@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Сона Тууви](https://up.htmlacademy.ru/htmlcss-individual/2/user/2609533).
-* Наставник: [НеизвестАнна Лисененковано] (https://htmlacademy.ru/profile/ankhena).
+* Наставник: [Анна Лисененкова] (https://htmlacademy.ru/profile/ankhena).
 
 ---
 
