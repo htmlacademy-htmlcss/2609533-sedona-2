@@ -2,7 +2,7 @@
 
 * Студент: [Сона Тууви](https://up.htmlacademy.ru/htmlcss-individual/2/user/2609533).
 * Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
-* Проэкт: [Седона](https://sonatuuvi.github.io/2609533-sedona-2/).
+* Проект: [Седона](https://sonatuuvi.github.io/2609533-sedona-2/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
