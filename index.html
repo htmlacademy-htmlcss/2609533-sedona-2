@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О Седоне</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
+    <div class="wrapper">
     <header class="page-header" data-test="page-header">
         <a class="logo" href="#" aria-current="page">
             <img  src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
@@ -16,16 +16,17 @@
         <nav class="navigation" data-test="navigation">
             <ul class="navigation-list">
                 <li class="navigation-item">
-                    <a href="index.html">Главная</a>
+                    <a class="navigation-link" href="index.html">Главная</a>
                 </li>
                 <li class="navigation-item">
-                    <a href="#">О Седоне</a>
+                    <a class="navigation-link" href="#">О Седоне</a>
                 </li>
                 <li class="navigation-item">
-                    <a href="#">Гостиницы</a>
+                    <a class="navigation-link" href="catalog.html">Гостиницы</a>
                 </li>
             </ul>
             <ul class="navigation-item navigation-user">
+
                 <li class="navigation-item">
                     <form action="#" method="POST">
                         <input type="search" placeholder="Поиск:">
@@ -33,13 +34,15 @@
                     </form>
                 </li>
                 <li class="navigation-item">
-                    <a class="user-favorites-link" href="#">
+                    <a class="user-favorites-link navigation-link" href="#">
                         <span class="visually-hidden">Гостиниц в избранном:</span>
                         <span class="likes-numbers">12</span>
                     </a>
                 </li>
-                <li >
-                    <a class="button botton-primary" href="#">Хочу сюда!</a>
+                <li class="">
+                    <div class="button navigation-button">
+                        <a class="button-link" href="#">Хочу сюда!</a>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -47,64 +50,66 @@
     </header>
 
     <main class="main-index" data-test="main">
-        <h1 class="visually-hidden">Седона</h1>
-        <img class="welcome-message" src="images/icons/index-icons/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
+        <section class="hero" data-test="hero">
+            <h1 class="hero-title visually-hidden">Седона</h1>
+            <img class="hero-image" src="images/icons/index-icons/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
+        </section>
 
         <section class="adventages" data-test="adventages">
             <h2 class="visually-hidden">Преимущества посещения Седоны</h2>
-            <p class="adventages-description-lead">Седона- небольшой городок в Аризоне, заслуживающий большего!<p>
+            <p class="adventages-description-lead">Седона - небольшой городок в Аризоне, заслуживающий большего!<p>
             <p class="adventages-description-reason">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
             <ul class="adventages-list">
                 <li class="adventages-item">
-                    <div class="adventages-wrapp">
+                    <div class="adventages-wrapper wrapper-dark">
                         <h3 class="adventages-title">Настоящий городок</h3>
-                        <p class="adventages-describtion"><b>Седона</b> — не аттракцион для туристов, там течет своя жизнь</p>
+                        <p class="adventages-description">Седона — не аттракцион для туристов, там течет своя жизнь</p>
+                        <img src="images/index-images/photo-true-city.jpg" width="800" height="385" alt="Город Седона">
                     </div>
-                    <img src="images/index-images/photo-true-city.jpg" width="800" height="385" alt="Город Седона">
                 </li>
                 <li class="adventages-item">
-                    <div class="adventages-wrapp">
+                    <div class="adventages-wrapper wrapper-light">
                         <h3 class="adventages-title">Небольшая площадь</h3>
-                        <p class="adventages-describtion">Все достопримечательности находятся очень близко</p>
+                        <p class="adventages-description">Все достопримечательности находятся очень близко</p>
                     </div>
                 </li>
                 <li class="adventages-item">
-                    <div class="adventages-wrapp">
+                    <div class="adventages-wrapper wrapper-middle">
                         <h3 class="adventages-title">Красивая дорога</h3>
-                        <p class="adventages-describtion">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                        <p class="adventages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                     </div>
                 </li>
                 <li class="adventages-item">
-                    <div class="adventages-wrapp">
+                    <div class="adventages-wrapper wrapper-light">
                         <h3 class="adventages-title">Мало туриствов</h3>
-                        <p class="adventages-describtion">Большинство едет в Гранд-Каньон и толпится там</p>
+                        <p class="adventages-description">Большинство едет в Гранд-Каньон и толпится там</p>
                     </div>
                 </li>
                 <li class="adventages-image">
-                    <div class="adventages-wrapp">
+                    <div class="adventages-wrapper wrapper-dark">
                         <h3 class="adventages-title">Там есть мост дьявола</h3>
-                        <p class="adventages-describtion">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                        <p class="adventages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                        <img src="images/index-images/photo-devil's-bridge.jpg" width="800" height="385" alt="Мост Дьявола">
                     </div>
-                    <img src="images/index-images/photo-вevil's-bridge.jpg" width="800" height="385" alt="Мост Дьявола">
                 </li>
             </ul>
         </section>
 
         <section class="services" data-test="services">
             <h2 class="services-title">Приезжайте в Седону отдохнуть в комфорте и уюте</h2>
-            <p class="services-describtion">Опытный персонал и качественное обслуживание!</p>
+            <p class="services-description">Опытный персонал и качественное обслуживание!</p>
             <ul class="services-list">
-                <li class="services-item">
+                <li class="services-item wrapper-middle">
                     <h3 class="services-title">Жилье</h3>
-                    <p class="services-describtion">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                    <p class="services-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
                 <li class="services-item">
                     <h3 class="services-title">Еда</h3>
-                    <p class="services-describtion">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+                    <p class="services-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
                 </li>
-                <li class="services-item">
+                <li class="services-item wrapper-middle">
                     <h3 class="services-title">Сувениры</h3>
-                    <p class="services-describtion">Не только китайского, но и настоящего местного производства!</p>
+                    <p class="services-description">Не только китайского, но и настоящего местного производства!</p>
                 </li>
             </ul>
         </section>
@@ -112,17 +117,19 @@
         <section class="search" data-test="search">
             <h2 class="search-title">Заинтересовались?</h2>
             <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <a class="button button-link search-link">Поиск гостинниц в Седоне</a>
+            <div class="button button-search">
+                <a class="button-link">Поиск гостинниц в Седоне</a>
+            </div>
         </section>
 
         <section class="subscribe" data-test="subscribe">
-            <h2 class="subscribe-title">Подпишись на рассылку</h2>
-            <p class="subscribe-description">Только полезная информация и никакого спама!</p>
+            <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+            <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscribe-form" action="#" method="post">
                 <p class="subscribe-form-email">
                     <label class="visually-hidden" for="write-email">Ваш e-mail</label>
                     <input type="email" id="write-email" placeholder="email@example.com" required>
-                    <button class="button subscribe-button" type="submit">Подписаться</button>
+                    <button class="subscribe-button" type="submit">Подписаться</button>
                 </p>
             </form>
         </section>
@@ -165,6 +172,6 @@
         </a>
 
     </footer>
-
+    </div>
 </body>
 </html>
