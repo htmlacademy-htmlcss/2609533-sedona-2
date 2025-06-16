@@ -16,7 +16,7 @@
         <nav class="navigation" data-test="navigation">
             <ul class="navigation-list">
                 <li class="navigation-item">
-                    <a class="navigation-link" href="index.html">Главная</a>
+                    <a class="navigation-link">Главная</a>
                 </li>
                 <li class="navigation-item">
                     <a class="navigation-link" href="#">О Седоне</a>
@@ -39,12 +39,10 @@
                         <span class="likes-numbers">12</span>
                     </a>
                 </li>
-                <li class="">
-                    <div class="button navigation-button">
-                        <a class="button-link" href="#">Хочу сюда!</a>
-                    </div>
-                </li>
             </ul>
+            <div class="button navigation-button">
+                <a class="button-link" href="#">Хочу сюда!</a>
+            </div>
         </nav>
 
     </header>
@@ -118,7 +116,7 @@
             <h2 class="search-title">Заинтересовались?</h2>
             <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             <div class="button button-search">
-                <a class="button-link">Поиск гостинниц в Седоне</a>
+                <button class="button-link">Поиск гостинниц в Седоне</button>
             </div>
         </section>
 
@@ -136,42 +134,51 @@
 
     </main>
 
-    <footer  class="page-footer" data-test="footer">
+    <footer class="page-footer" data-test="footer">
 
-        <section class="social" data-test="social">
-            <h2 class="visually-hidden">Давайте дружить</h2>
-            <ul class="social-list">
-                <li class="social-item">
-                    <a class="social-link" href="#">
-                        <span class="visually-hidden">VK</span>
-                        <img src="vk-icon.svg" alt="" aria-hidden="true">
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a class="social-link" href="#">
-                        <span class="visually-hidden">Telegram</span>
-                        <img src="telegram-icon.svg" alt="" aria-hidden="true">
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a class="social-link" href="#">
-                        <span class="visually-hidden">YouTube</span>
-                        <img src="youtube-icon.svg" alt="" aria-hidden="true">
-                    </a>
-                </li>
-            </ul>
-        </section>
+    <section class="social" data-test="social">
+        <h2 class="visually-hidden">Давайте дружить</h2>
+        <ul class="social-list">
+            <li class="social-item">
+                <a class="social-link" href="#">
+                    <span class="visually-hidden">VK</span>
+                    <svg aria-hidden="true">
+                        <use xlink:href="vk-icon.svg#icon"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a class="social-link" href="#">
+                    <span class="visually-hidden">Telegram</span>
+                    <svg aria-hidden="true">
+                        <use xlink:href="telegram-icon.svg#icon"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a class="social-link" href="#">
+                    <span class="visually-hidden">YouTube</span>
+                    <svg aria-hidden="true">
+                        <use xlink:href="youtube-icon.svg#icon"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </section>
 
-        <section class="contacts" data-test="contacts">
-            <h2 class="visually-hidden">Контакты</h2>
-            <a class="contact-phone-link" href="tel:78121212">+7 (812) 812-12-12</a>
-        </section>
+    <section class="contacts" data-test="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <a class="contact-phone-link" href="tel:78121212">+7 (812) 812-12-12</a>
+    </section>
 
-        <a class="author-logo" href="https://htmlacademy.ru">
-            <img class="author" src="images/author-logo.svg" width="115" height="33" alt="Разработчик сайта: HTML Academy">
-        </a>
+    <a class="author-logo" href="https://htmlacademy.ru">
+        <svg class="author" width="115" height="33" aria-label="Разработчик сайта: HTML Academy">
+            <use xlink:href="images/author-logo.svg#icon"></use>
+        </svg>
+    </a>
 
-    </footer>
+</footer>
+
     </div>
 </body>
 </html>
