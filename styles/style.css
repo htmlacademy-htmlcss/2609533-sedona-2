@@ -62,6 +62,7 @@ body {
 }
 
 /* Класс для ссылки */
+
 .link {
     text-decoration: none;
 }
@@ -89,6 +90,19 @@ body {
     background-color: rgba(131, 179, 211, 0.12);
 }
 
+.title-form-main {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.text-input {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -110,6 +124,10 @@ body {
     background-color: #756157;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.button:disabled {
+  cursor: auto;
 }
 
 /* ========================= */
@@ -499,8 +517,6 @@ body {
   text-align: center;
 
 }
-
-
 
 .services-house.services-item::before {
   content: url("../images/icons/index-icons/adventures/advantage-icon-home.svg");
@@ -1572,3 +1588,338 @@ body {
   opacity: 30%;
 }
 
+
+/* ========================= */
+/* стили для модального окна */
+/* ========================= */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+  z-index: 1;
+}
+
+.modal-container-hidden {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 577px;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 577px;
+}
+
+.modal-heading {
+  max-width: 500px;
+  margin: 0 auto 64px 0;
+  padding-right: 24px;
+}
+
+.modal-close-button {
+  position: relative;
+  display: grid;
+  right: -18px;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 0 48px 0;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:active .modal-close-image {
+  opacity: 30%;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 136px 111px 88px 131px 111px;
+  grid-template-rows: min-content min-content min-content min-content min-content 48px min-content;
+  align-items: center;
+}
+
+.check-in-date-label {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.check-in-date-input-wrapper {
+  position: relative;
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+}
+
+.check-out-date-label {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.check-out-date-input-wrapper {
+  position: relative;
+  grid-column: 2 / -1;
+  grid-row: 3 / 4;
+}
+
+.check-in-date-input-wrapper::after,
+.check-out-date-input-wrapper::after {
+  content: url("../images/icons/calendar.svg");
+  position: absolute;
+  top: 14px;
+  right: 23px;
+  opacity: 30%;
+}
+
+.check-in-date-input,
+.check-out-date-input {
+  width: 366px;
+  padding: 12px 54px 12px 20px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-form-input {
+  font-family: inherit;
+}
+
+.search-form-input:placeholder-shown {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form-input:not(:disabled):hover {
+  background-color: #e5e5e5;
+}
+
+.search-form-input:focus-visible {
+  background-color: #e5e5e5;
+  outline: 3px solid #83b3d3;
+}
+
+.search-form-input:disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.adults-number-label {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+}
+
+.adults-number-input-wrapper {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+.children-number-label {
+  display: flex;
+  grid-column: 4 / 5;
+  grid-row: 5 / 6;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.children-number-input-wrapper {
+  grid-column: 5 / 6;
+  grid-row: 5 / 6;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+.adults-number-input,
+.children-number-input {
+  width: 31px;
+  padding: 14px 8px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.number-input-button {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 30%;
+  cursor: pointer;
+}
+
+.number-input-button:hover {
+  opacity: 100%;
+}
+
+.number-input-button:focus-visible {
+  opacity: 100%;
+  outline: 3px solid #82b3d3;
+  z-index: 1;
+}
+
+.number-input-button:active {
+  opacity: 30%;
+}
+
+.search-form-button {
+  grid-column: 1 / -1;
+  grid-row: 7 / 8;
+  padding: 18px;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: #83B3D3;
+  border: none;
+  border-radius: 10px;
+}
+
+.search-form-button:hover {
+  background-color: #68a2ca;
+}
+
+.search-form-button:focus-visible {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.search-form-button:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #68a2ca;
+}
+
+.search-form-button:disabled {
+  color: #ffffff;
+  background-color: #e5e5e5;
+}
+
+.check-in-date-text {
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
+}
+
+.check-out-date-text {
+  grid-column: 2 / -1;
+  grid-row: 4 / 5;
+}
+
+.search-form-result-text {
+  min-height: 40px;
+  margin: 0;
+  padding: 4px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.result-text-value {
+  display: none;
+}
+
+.result-text-value-open {
+  display: block;
+}
+
+.date-error-text {
+  color: #ff5757;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-button {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  background-color: #83b3d3;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tooltip-button:focus-visible {
+  outline: none;
+}
+
+.tooltip-button:active {
+  opacity: 0.6;
+}
+
+.tooltip-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 216px;
+  min-height: 100px;
+  margin-top: 15px;
+  padding: 20px 18px 22px 22px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid #333333;
+}
+
+.tooltip-button:hover + .tooltip-text,
+.tooltip-button:focus + .tooltip-text,
+.tooltip-text-open {
+  display: block;
+}
