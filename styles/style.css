@@ -140,14 +140,14 @@ body {
 
 .navigation {
    display: flex;
-   flex-wrap: wrap;;
+   flex-wrap: wrap;
+   margin-bottom: -6px;
+   position: relative;
 }
 
 .logo-link {
   display: block;
   margin-right: 30px;
-  margin-bottom: -6px;
-  z-index: 1;
 }
 
 .logo-link:hover,
@@ -371,7 +371,7 @@ body {
   text-align: center;
 }
 
-.advantages-item--middle {
+.advantages-item-middle {
   background-color: rgba(131, 179, 211, 0.2);
   display: flex;
   justify-content: center;
@@ -380,56 +380,67 @@ body {
    width: 400px;
 }
 
-.advantages-item--edge {
+.advantages-item-edge {
    display: flex;
-  width: 1200px;
-  color: #ffffff;
-  background-color: #82b3d3;
+   width: 1200px;
+   color: #ffffff;
+   background-color: #82b3d3;
 }
 
-.advantages-item--edge .advantages-wrapper {
+.advantages-item-edge .advantages-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.advantages-item--edge-last .advantages-photo {
+.advantages-item-edge-last .advantages-photo {
   order: -1;
 }
 
 .advantages-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.advantages-text-wrapper--middle {
+.advantages-text-wrapper-middle {
     padding: 112px 85px;
+    width: 230px;
 }
 
 .advantages-item-description {
-  padding: 102px 85px;
-  width: 230px;
+    padding: 96px 85px;
+    width: 230px;
 }
 
 .advantages-title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
-  margin: 0 0 20px;
+    display: block;
+    min-height: 56px;
+    margin: 0 0 62px 0;
+    text-align: center;
 }
 
 .advantages-description {
-  font-size: 18px;
-  line-height: 24px;
+  position: relative;
   margin: 0;
   color: #333333;
   text-align: center;
 }
 
-.advantages-description--edge {
+.advantages-description::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: currentColor;
+  opacity: 30%;
+}
+
+.advantages-description-edge {
   color: #ffffff;
 }
 
@@ -440,15 +451,15 @@ body {
   object-fit: cover;
 }
 
-.wrapper-dark {
+.advantages-wrapper-dark {
   background-color: #82b3d3;
 }
 
-.wrapper-light {
+.advantages-wrapper-light {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.wrapper-middle {
+.advantages-wrapper-middle {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
@@ -563,21 +574,32 @@ body {
 
 .button-search {
     display: block;
-    width: 375px;
-    height: 52px;
-    border-radius: 4px;
-    color: #ffffff;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 52px;
-    text-decoration: none;
-    cursor: pointer;
-    box-sizing: border-box;
+    width: 376px;
     margin: 0 auto;
-    padding: 0;
+    padding: 8px 50px;
+    font-size: 20px;
+    line-height: 36px;
+    border-width: 0;
+    border-radius: 4px;
+}
+
+.button-search:hover {
+  background-color: #615048;
+}
+
+.button-search:focus-visible {
+  background-color: #615048;
+  outline: none;
+}
+
+.button-search:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
+.button-search:disabled {
+  background-color: #e5e5e5;
+  cursor: auto;
 }
 
 /* ========================= */
@@ -638,13 +660,36 @@ body {
 }
 
 .subscribe-email {
+    font-family: inherit;
+    font-size: inherit;
     width: 412px;
     padding: 14px 20px;
-    font-size: inherit;
     line-height: 24px;
     background-color: #f2f2f2;
     border-width: 0;
     border-radius: 4px 0 0 4px;
+}
+
+.subscribe-email:hover {
+  background-color: #e6e6e6;
+}
+
+.subscribe-email:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.subscribe-email:not(:placeholder-shown) {
+  font-weight: 700;
+  background-color: #f2f2f2;
+}
+
+.subscribe-email:disabled {
+  background-color: #e6e6e6;
+}
+
+.subscribe-email:disabled::placeholder {
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .subscribe-button {
@@ -655,7 +700,6 @@ body {
     align-items: center;
     background: #82b3d3;
     border: none;
-
     border-radius: 0 4px 4px 0;
     font-family: "pt sans", sans-serif;
     font-weight: 700;
@@ -665,6 +709,25 @@ body {
     line-height: 1;
     padding: 8px 50px;
     cursor: pointer;
+}
+
+.subscribe-button:hover {
+  background-color: #68a2ca;
+}
+
+.subscribe-button:focus-visible {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.subscribe-button:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82b3d3;
+}
+
+.subscribe-button:disabled {
+  background-color: #e5e5e5;
+  cursor: auto;
 }
 
 /* ========================= */
@@ -1200,7 +1263,7 @@ body {
 .hotels-list {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 0 0 80px 0;
     padding: 0;
