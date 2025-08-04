@@ -317,7 +317,7 @@ body {
   display: block;
   max-width: 630px;
   min-height: 72px;
-  margin: 0 auto 25px;
+  margin: 0 auto -10px;
   text-align: center;
 }
 
@@ -1251,9 +1251,9 @@ padding-top: 6px;
     display: grid;
     grid-template-columns: 140px 140px;
     grid-template-rows: auto 1fr auto auto auto;
-    gap: 16px 20px;
+    gap: 17px 20px;
     width: 300px;
-    padding: 20px;
+    padding:  20px 20px 0 20px;
     border-radius: 4px;
     outline: 1px solid #e6e6e6;
 }
@@ -1284,7 +1284,7 @@ padding-top: 6px;
 .hotel-title {
     width: 300px;
     min-height: 28px;
-    margin: 16px 0 16px 0;
+    margin: 16px 0 0;
     text-transform: none;
     grid-column: 1 / -1;
     color: #000000;
@@ -1344,6 +1344,7 @@ padding-top: 6px;
   margin: 0;
   padding: 8px 26px;
   border-radius: 4px;
+  font-size: 16px;
 }
 
 .hotel-button-link:hover {
@@ -1512,6 +1513,7 @@ padding-top: 6px;
   justify-content: space-between;
   padding: 40px 70px 35px;
   align-items: center;
+  margin-top: 6px;
 }
 
 .social {
@@ -1522,7 +1524,7 @@ padding-top: 6px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 142px;
-  margin: 0;
+  margin: 0 0 0 12px;
   padding: 0;
   list-style-type: none;
 }
